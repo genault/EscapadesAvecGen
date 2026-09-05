@@ -83,7 +83,7 @@
 
   .nom{
     font-family:'Gabriola','Tangerine','Segoe Script',cursive;
-    font-size:2.3rem;
+    font-size:3.1rem;
     line-height:1.05;
     color:var(--marine);
     margin:0;
@@ -93,7 +93,7 @@
     display:block;
     font-family:'EB Garamond', Georgia, serif;
     font-style:italic;
-    font-size:0.95rem;
+    font-size:1.45rem;
     letter-spacing:0.04em;
     color:var(--marine-doux);
     margin-top:2px;
@@ -160,7 +160,7 @@
 
   .titre-lien{
     display:block;
-    font-size:1.08rem;
+    font-size:1.65rem;
     font-weight:500;
     color:var(--marine);
   }
@@ -168,7 +168,7 @@
   .sous-texte{
     display:block;
     font-style:italic;
-    font-size:0.85rem;
+    font-size:1.25rem;
     color:var(--marine-doux);
     margin-top:1px;
   }
@@ -188,14 +188,18 @@
 
   .pied p{
     margin:0;
-    font-size:0.8rem;
+    font-size:1.05rem;
     letter-spacing:0.03em;
     color:var(--marine-doux);
   }
 
   @media (max-width:380px){
-    .nom{ font-size:2.2rem; }
+    .nom{ font-size:2.45rem; }
+    .metier{ font-size:1.25rem; }
+    .titre-lien{ font-size:1.35rem; }
+    .sous-texte{ font-size:1.05rem; }
     .logo{ width:60px; height:60px; }
+    .lien{ gap:14px; padding:18px 8px; }
   }
 </style>
 </head>
@@ -231,7 +235,7 @@
         </span>
         <span class="texte-lien">
           <span class="titre-lien">Ma page Facebook</span>
-          <span class="sous-texte">Suivez mes escapades</span>
+          <span class="sous-texte">Abonnez-vous pour voir les photos de groupe</span>
         </span>
       </a>
     </li>
@@ -251,8 +255,11 @@
       </a>
     </li>
 
+    <!-- Le téléchargement VCF utilise l’attribut download pour favoriser l’enregistrement du fichier sur mobile. -->
     <li>
-      <a class="lien" href="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Fichiers/contact_Genevieve.vcf" target="_blank" rel="noopener noreferrer" aria-label="Ajouter Geneviève à vos contacts">
+      <a class="lien" href="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Fichiers/contact_Genevieve.vcf"
+         download="Contact_EscapadesAvecGen.vcf"
+         aria-label="Ajouter Geneviève à vos contacts">
         <span class="badge">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="6" width="16" height="12" rx="2" stroke="#1F3A5C" stroke-width="1.3"/>
@@ -263,7 +270,7 @@
         </span>
         <span class="texte-lien">
           <span class="titre-lien">Ajouter mes coordonnées</span>
-          <span class="sous-texte">Fiche contact à importer dans votre téléphone</span>
+          <span class="sous-texte">Fiche contact à ajouter vos contacts téléphoniques</span>
         </span>
       </a>
     </li>
@@ -279,7 +286,7 @@
         </span>
         <span class="texte-lien">
           <span class="titre-lien">Ma carte d'affaires</span>
-          <span class="sous-texte">Fichier à télécharger</span>
+          <span class="sous-texte">À sauvegarder dans vos photos</span>
         </span>
       </a>
     </li>

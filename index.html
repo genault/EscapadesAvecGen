@@ -29,9 +29,8 @@
     font-family:'EB Garamond', Georgia, serif;
     color:var(--marine);
     display:flex;
-    justify-content:flex-start;
-    padding:32px 16px 56px;
-    min-height:100vh;
+    justify-content:center;
+    padding:32px 16px;
   }
 
   /* ===== Le "billet de voyage" qui contient toute la page ===== */
@@ -81,7 +80,7 @@
 
  
 
-  .titre-bloc{ }
+  .titre-bloc{ text-align:center; }
 
   .nom{
     font-family:'Gabriola','Tangerine','Segoe Script',cursive;
@@ -175,10 +174,28 @@
     margin-top:1px;
   }
 
+  /* ===== Ligne pointillée entre le texte du bas et la bordure du bas de la carte ===== */
+  .perforation-bas{
+    border:none;
+    border-top:1.5px dashed var(--marine-doux);
+    opacity:0.5;
+    margin:10px 24px 0;
+  }
+
+  .pied a{
+    color:inherit;
+    text-decoration:underline;
+  }
+
+  .pied a:hover,
+  .pied a:focus-visible{
+    color:var(--coucher);
+  }
+
   /* ===== Pied de page ===== */
   .pied{
     text-align:center;
-    padding:4px 24px 2px;
+    padding:4px 24px 14px;
   }
 
   .fleuron{
@@ -236,7 +253,7 @@
           </svg>
         </span>
         <span class="texte-lien">
-          <span class="titre-lien">Ma page Facebook</span>
+          <span class="titre-lien">Facebook Escapades avec Gen</span>
           <span class="sous-texte">Suivez la page pour voir les photos de voyage</span>
         </span>
       </a>
@@ -251,13 +268,13 @@
           </svg>
         </span>
         <span class="texte-lien">
-          <span class="titre-lien">Ma carte d'affaires</span>
+          <span class="titre-lien">Coordonnées de Geneviève</span>
           <span class="sous-texte">À sauvegarder dans vos photos</span>
         </span>
       </a>
     </li>
     <li>
-      <a class="lien" href="https://m.me/j/l3c_0Si5O1EAtMWr/" target="_blank" rel="noopener noreferrer" aria-label="Groupe Messenger du voyage">
+      <a class="lien" href="https://m.me/j/l3c_0Si5O1EAtMWr/?send_source=gc:copy_invite_link_c" target="_blank" rel="noopener noreferrer" aria-label="Groupe Messenger du voyage">
         <span class="badge">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 4.5c-4.7 0-8.3 3.3-8.3 7.7 0 2.5 1.2 4.7 3.1 6.2v3l2.9-1.6c.7.2 1.5.3 2.3.3 4.7 0 8.3-3.3 8.3-7.9S16.7 4.5 12 4.5Z" stroke="#1F3A5C" stroke-width="1.3" stroke-linejoin="round"/>
@@ -265,17 +282,35 @@
           </svg>
         </span>
         <span class="texte-lien">
-          <span class="titre-lien">Groupe Messenger du voyage</span>
-          <span class="sous-texte">Pour jaser avec le groupe</span>
+          <span class="titre-lien">Groupe Messenger</span>
+          <span class="sous-texte">Discussions, partage et annonces de groupe</span>
         </span>
       </a>
     </li>
 
-    <!-- Le téléchargement VCF utilise l’attribut download pour favoriser l’enregistrement du fichier sur mobile. -->
+    <!-- Nouveau bloc : Groupe WhatsApp du voyage (ajouté comme deuxième option pour jaser avec le groupe) -->
     <li>
-      <a class="lien" href="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Fichiers/contact_Genevieve.vcf"
-         download="Contact_Genevieve.vcf"
-         aria-label="Ajouter Geneviève à vos contacts">
+      <a class="lien" href="https://chat.whatsapp.com/CxPRft0PdYMCqdYIrjefG9?mode=gi_t" target="_blank" rel="noopener noreferrer" aria-label="Groupe WhatsApp du voyage">
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4.5c-4.4 0-8 3.4-8 7.6 0 1.5.4 2.9 1.2 4.1L4.5 19.5l3.5-.9c1.2.7 2.6 1.1 4 1.1 4.4 0 8-3.4 8-7.6s-3.6-7.6-8-7.6Z" stroke="#1F3A5C" stroke-width="1.3" stroke-linejoin="round"/>
+            <path d="M9.3 9.7c-.2.5-.1 1.1.3 1.7.7 1.1 1.8 2.1 3 2.7.6.3 1.1.3 1.5 0l.4-.4c.2-.2.2-.5 0-.6l-.8-.8c-.2-.2-.5-.2-.6 0l-.3.3c-.6-.3-1.1-.7-1.5-1.3l.3-.3c.2-.2.2-.5 0-.6l-.7-.8c-.2-.2-.4-.2-.6 0Z" stroke="#1F3A5C" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="texte-lien">
+          <span class="titre-lien">Groupe WhatsApp</span>
+          <span class="sous-texte">Discussions, partage et annonces de groupe</span>
+        </span>
+      </a>
+    </li>
+
+    <!-- Lien vers la fiche VCF : pas d'attribut "download" et pas de "target=_blank", -->
+    <!-- pour que l'iPhone affiche l'écran « Ajouter aux contacts » plutôt que de juste -->
+    <!-- télécharger un fichier. Le fichier est servi via jsDelivr (et non raw.githubusercontent.com) -->
+    <!-- parce que raw.githubusercontent.com envoie les .vcf comme texte brut, ce qui empêche l'iPhone -->
+    <!-- de reconnaître la fiche de contact. -->
+    <li>
+      <a class="lien" href="https://cdn.jsdelivr.net/gh/genault/EscapadesAvecGen@main/Fichiers/contact_Genevieve.vcf" aria-label="Ajouter mes coordonnées">
         <span class="badge">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="6" width="16" height="12" rx="2" stroke="#1F3A5C" stroke-width="1.3"/>
@@ -285,7 +320,7 @@
           </svg>
         </span>
         <span class="texte-lien">
-          <span class="titre-lien">Ajouter mes coordonnées</span>
+          <span class="titre-lien">Fiche contact de Geneviève</span>
           <span class="sous-texte">Fiche à ajouter vos contacts téléphoniques</span>
         </span>
       </a>
@@ -306,7 +341,8 @@
       <circle cx="27.7" cy="10.6" r="2.5" fill="var(--corail)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
       <circle cx="32"   cy="12"   r="1.8" fill="var(--or)" stroke="var(--marine)" stroke-width="0.6"/>
     </svg>
-    <p>Escapades avec Gen</p>
+    <p>Escapades avec Gen - <a href="mailto:EscapadesAvecGen@hotmail.com">EscapadesAvecGen@hotmail.com</a></p>
+    <hr class="perforation-bas">
   </footer>
 
 </div>

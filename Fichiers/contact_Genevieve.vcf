@@ -3,26 +3,24 @@ VERSION:3.0
 PRODID:-//Apple Inc.//iPhone OS 27.0//EN
 N:Nault;Genevieve;;;
 FN:Genevieve Nault
-ORG:EscapadesAvecGen - GVQ;
+ORG:EscapadesAvecGen;
 TITLE:Guide-accompagnatrice GVQ
 EMAIL;type=INTERNET;type=WORK;type=pref:EscapadesAvecGen@hotmail.com
 TEL;type=CELL;type=VOICE;type=pref:(819) 239-4082
 item1.ADR;type=HOME;type=pref:;;;Sherbrooke;;;Canada
 item1.X-ABADR:ca
-X-SOCIALPROFILE;type=WhatsApp;x-user=+1 819-239-4082:x-apple:8192394082
-X-SOCIALPROFILE;type=Polarsteps;x-user=gnault:x-apple:gnault
 X-SOCIALPROFILE;type=facebook:http://www.facebook.com/EscapadesAvecGen
-X-SOCIALPROFILE;type=facebook:http://www.facebook.com/gnault
-X-SOCIALPROFILE;type=linkedin:http://www.linkedin.com/in/gnault
 NOTE:Guide-accompagnatrice Groupe Voyages Quebec\n\nWhatsApp: +1 819-239-4082
-item2.URL;type=pref:www.linkedin.com/in/gnault
+item2.URL;type=pref:https://www.linkedin.com/in/gnault
 item2.X-ABLabel:_$!<HomePage>!$_
-item3.URL:facebook.com/EscapadesAvecGen
+item3.URL:https://facebook.com/EscapadesAvecGen
 item3.X-ABLabel:_$!<HomePage>!$_
-item4.IMPP;X-SERVICE-TYPE=Facebook;type=pref:xmpp:gnault
+item4.IMPP;X-SERVICE-TYPE=Facebook;type=pref:xmpp:EscapadesAvecGen
 item4.X-ABLabel:Facebook
 item5.IMPP;X-SERVICE-TYPE=WhatsApp:x-apple:+1%20819-239-4082
 item5.X-ABLabel:WhatsApp
+item6.IMPP;X-SERVICE-TYPE=Facebook:xmpp:gnault
+item6.X-ABLabel:Facebook
 PHOTO;ENCODING=b:AAAAJGZ0eXBoZWljAAAAAG1pZjFNaVBybWlhZk1pSEJoZWljAAABhG1ldG
  EAAAAAAAAAIWhkbHIAAAAAAAAAAHBpY3QAAAAAAAAAAAAAAAAAAAAAJGRpbmYAAAAcZHJlZgAA
  AAAAAAABAAAADHVybCAAAAABAAAADnBpdG0AAAAAAAEAAAAjaWluZgAAAAAAAQAAABVpbmZlAg

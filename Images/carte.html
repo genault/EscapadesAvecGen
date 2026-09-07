@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="UTF-8">
+<!-- C'est ce titre qui va s'afficher dans l'onglet du navigateur -->
+<title>Carte de contact de Geneviève Nault</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Étape 1 : on prend toute la hauteur de l'écran et on centre l'image */
+  html, body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    background:#FAF4E9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* Étape 2 : l'image s'ajuste à l'écran sans jamais déborder */
+  img{
+    max-width:100%;
+    max-height:100vh;
+    height:auto;
+    display:block;
+  }
+</style>
+</head>
+<body>
+  <!-- L'image de la carte, affichée pleine grandeur mais toujours bien ajustée à l'écran -->
+  <img src="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Images/carte.png" alt="Carte de contact de Geneviève Nault">
+</body>
+</html>

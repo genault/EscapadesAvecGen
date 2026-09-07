@@ -89,7 +89,7 @@
     font-size:1.45rem;
     letter-spacing:0.04em;
     color:var(--marine-doux);
-    margin-top:2px;
+    margin-top:-10px;
   }
 
   /* ===== Séparateur pointillé, comme une perforation de billet ===== */
@@ -172,6 +172,13 @@
     border-top:1.5px dashed var(--marine-doux);
     opacity:0.5;
     margin:10px 24px 0;
+  }
+
+  .fleuron{
+    width:64px;
+    height:auto;
+    margin:12px auto 10px;
+    display:block;
   }
 
   .pied a{
@@ -337,6 +344,16 @@
 
   <!-- Pied de page : logo bleu à gauche avec le nom et le courriel, sur 2 lignes -->
   <footer class="pied">
+    <!-- Petite fleur décorative : pétales dans le même orange que le logo GVQ (variable --coucher) -->
+    <svg class="fleuron" viewBox="0 0 64 24" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
+      <path d="M4 12H23M41 12H60" stroke="var(--marine-doux)" stroke-width="1" opacity="0.5"/>
+      <circle cx="32"   cy="7.5"  r="2.5" fill="var(--coucher)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
+      <circle cx="36.3" cy="10.6" r="2.5" fill="var(--coucher)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
+      <circle cx="34.6" cy="15.6" r="2.5" fill="var(--coucher)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
+      <circle cx="29.4" cy="15.6" r="2.5" fill="var(--coucher)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
+      <circle cx="27.7" cy="10.6" r="2.5" fill="var(--coucher)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
+      <circle cx="32"   cy="12"   r="1.8" fill="var(--or)" stroke="var(--marine)" stroke-width="0.6"/>
+    </svg>
     <div class="pied-bas">
       <img class="logo-bas" src="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Images/logo.png" alt="Escapades avec Gen">
       <div class="pied-texte">

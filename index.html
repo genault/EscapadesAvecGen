@@ -43,24 +43,16 @@
     overflow:hidden;
   }
 
-  /* ===== Bandeau partenaire : logo Groupe Voyages Québec ===== */
+  /* ===== Bandeau partenaire : logo Groupe Voyages Québec, seul et centré ===== */
   .bandeau-partenaire{
     display:flex;
     justify-content:center;
     align-items:center;
     background:var(--creme-clair);
-    gap:12px;
-    padding:10px 12px 8px;
+    padding:14px 12px 8px;
     border-bottom:1px solid rgba(31,58,92,0.15);
   }
 
-  .logo-entete-gauche{
-    width:78px;
-    height:78px;
-    border-radius:50%;
-    object-fit:cover;
-    flex-shrink:0;
-  }
   .logo-partenaire{
     width:100%;
     max-width:230px;
@@ -194,22 +186,34 @@
 
   /* ===== Pied de page ===== */
   .pied{
-    text-align:center;
-    padding:4px 24px 14px;
+    padding:14px 24px 14px;
   }
 
-  .fleuron{
-    width:64px;
-    height:auto;
-    margin:0 auto 0px;
-    display:block;
+  /* Bloc logo + courriel du pied de page, aligné à gauche */
+  .pied-bas{
+    display:flex;
+    align-items:center;
+    gap:12px;
   }
 
-  .pied p{
+  .logo-bas{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+  }
+
+  .pied-texte{
+    text-align:left;
+  }
+
+  .pied-texte p{
     margin:0;
     font-size:1.05rem;
     letter-spacing:0.03em;
     color:var(--marine-doux);
+    line-height:1.4;
   }
 
   @media (max-width:380px){
@@ -226,9 +230,8 @@
 
 <div class="billet">
 
-  <!-- Bandeau partenaire : logo Groupe Voyages Québec -->
+  <!-- Bandeau partenaire : uniquement le logo Groupe Voyages Québec, centré -->
   <div class="bandeau-partenaire">
-    <img class="logo-entete-gauche" src="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Images/logo.png" alt="Escapades avec Gen">
     <img class="logo-partenaire" src="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Images/GVQ.png" alt="Groupe Voyages Québec">
   </div>
 
@@ -330,19 +333,17 @@
 
   </ul>
 
-  <!-- Pied de page : petit fleuron floral inspiré du bouquet du logo -->
+  <hr class="perforation-bas">
+
+  <!-- Pied de page : logo bleu à gauche avec le nom et le courriel, sur 2 lignes -->
   <footer class="pied">
-    <svg class="fleuron" viewBox="0 0 64 24" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
-      <path d="M4 12H23M41 12H60" stroke="var(--marine-doux)" stroke-width="1" opacity="0.5"/>
-      <circle cx="32"   cy="7.5"  r="2.5" fill="var(--corail)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
-      <circle cx="36.3" cy="10.6" r="2.5" fill="var(--corail)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
-      <circle cx="34.6" cy="15.6" r="2.5" fill="var(--corail)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
-      <circle cx="29.4" cy="15.6" r="2.5" fill="var(--corail)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
-      <circle cx="27.7" cy="10.6" r="2.5" fill="var(--corail)" stroke="var(--marine)" stroke-width="0.6" opacity="0.9"/>
-      <circle cx="32"   cy="12"   r="1.8" fill="var(--or)" stroke="var(--marine)" stroke-width="0.6"/>
-    </svg>
-    <p>Escapades avec Gen - <a href="mailto:EscapadesAvecGen@hotmail.com">EscapadesAvecGen@hotmail.com</a></p>
-    <hr class="perforation-bas">
+    <div class="pied-bas">
+      <img class="logo-bas" src="https://raw.githubusercontent.com/genault/EscapadesAvecGen/main/Images/logo.png" alt="Escapades avec Gen">
+      <div class="pied-texte">
+        <p>Escapades avec Gen</p>
+        <p><a href="mailto:EscapadesAvecGen@hotmail.com">EscapadesAvecGen@hotmail.com</a></p>
+      </div>
+    </div>
   </footer>
 
 </div>
